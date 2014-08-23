@@ -11,6 +11,7 @@ deploy:
   provider: heroku
   api_key:
     secure: XC5k+phUuebfQb/+U4TCZoQSpXdqpcpLoKz/vx6WmLfhOnDAdWlNov3FzDzaHmhWo82CWhPBxO2BwEZt/rdBcOEg/vYi73n3jnYb9r0bHjmnrM/XroYIqCqdws0TxIk09gdxfeWmx6mN3NcXo+ORlcYLC3FUiOJ6IHnYMsm1xSU=
+  strategy: git
   app: young-refuge-4897
   on:
     repo: sharma-mohit/django-travis-heroku
