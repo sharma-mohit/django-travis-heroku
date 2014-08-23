@@ -3,6 +3,11 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 admin.autodiscover()
 
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
+# ... the rest of your URLconf goes here ...
+
+
 urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'djangotodo.views.home', name='home'),
@@ -12,3 +17,4 @@ urlpatterns = patterns('',
     url(r'^todo/', include(admin.site.urls)),
     url(r'^$', 'todo.views.index'),
 )
+urlpatterns += staticfiles_urlpatterns()
