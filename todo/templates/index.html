@@ -1,8 +1,8 @@
-<h2>todo</h2>
+<h2>My ToDo List</h2>
  
 {% for x in items %}
-<p>{{ x.name }} - {{ x.created|date:"D d M Y" }}</p>
- 
-<p>{{ x.description }}</p>
+<p><em>Title: </em> <b>{{ x.name }} </b> </p>
+<p><em>Created: </em>{{ x.created|date:"D d M Y" }}</p>
+<p><em>Description: </em> {{ x.description }}</p>
 <hr />
 {% endfor %}
