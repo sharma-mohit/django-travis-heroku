@@ -14,7 +14,8 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^todo/', include(admin.site.urls)),
+    url(r'^add/', include(admin.site.urls)),
+    url(r'^new/', include(admin.site.urls)),
     url(r'^$', 'todo.views.index'),
 )
 urlpatterns += staticfiles_urlpatterns()
