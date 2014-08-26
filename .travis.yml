@@ -21,4 +21,4 @@ before_install:
 after_success:
   - chmod 600 travis.key.pem 
   - ssh-add travis.key.pem
-  - ssh -p59797 stannis@58.182.94.53 "cd /home/stannis/project/vagrant_chef_solo && vagrant reload"
+  - ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p59797 stannis@58.182.94.53 "cd /home/stannis/project/vagrant_chef_solo && vagrant reload"
