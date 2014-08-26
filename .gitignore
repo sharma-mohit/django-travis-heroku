@@ -3,3 +3,5 @@
 /lib
 /share
 *.pyc
+travis.key.pem
+

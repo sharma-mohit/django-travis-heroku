@@ -15,3 +15,10 @@ deploy:
   app: young-refuge-4897
   on:
     repo: sharma-mohit/django-travis-heroku
+before_install:
+- openssl aes-256-cbc -K $encrypted_baab89578276_key -iv $encrypted_baab89578276_iv
+  -in travis.key.pem.enc -out travis.key.pem -d
+after_success:
+  - chmod 600 travis.key.pem 
+  - ssh-add travis.key.pem
+  - ssh -p59797 stannis@58.182.94.53 "cd /home/stannis/project/vagrant_chef_solo && vagrant reload"
